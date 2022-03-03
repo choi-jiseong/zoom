@@ -1,0 +1,21 @@
+{
+  "name": "zoom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
