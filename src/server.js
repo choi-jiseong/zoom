@@ -1,5 +1,7 @@
 import express from "express";
-
+import http from "http";
+import Websocket from "ws";
+import {homedir} from "os";
 console.log('hello');
 
 const app = express();
@@ -13,5 +15,14 @@ app.use("/public", express.static(__dirname+"/public"));
 // }
 
 app.get("/", (_, res) => {res.render("home")});
+app.get("/*", (_, res) => {res.redirect("/")});
 
-app.listen(3003);
+const handleListen = () => console.log(`Listening on http://localhost:3003`);
+
+const server = http.createServer(app);
+
+const wss = new Websocket.Server({server});
+
+
+
+server.listen(3003, handleListen);
